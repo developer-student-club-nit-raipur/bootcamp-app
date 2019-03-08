@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DSCBootcamp</string>
+
+    <string name="header_recycler_view_activity">List of Users</string>
+    <string name="sample_name">user name</string>
+    <string name="sample_number">phone number</string>
 </resources>
