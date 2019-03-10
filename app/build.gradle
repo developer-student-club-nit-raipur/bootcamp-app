@@ -21,6 +21,8 @@ android {
 dependencies {
 
     final BASIC_LIBRARY_VERSION = '28.0.0'
+    final RETROFIT_VERSION = '2.3.0'
+    final OKHTTP_VERSION = '3.9.1'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -43,5 +45,11 @@ dependencies {
     // Glide Transformations
     implementation 'jp.wasabeef:glide-transformations:3.3.0'
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+
+    // Square
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    implementation "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    implementation "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION"
 
 }

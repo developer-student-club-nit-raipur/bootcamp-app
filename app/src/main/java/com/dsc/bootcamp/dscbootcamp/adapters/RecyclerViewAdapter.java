@@ -3,6 +3,7 @@ package com.dsc.bootcamp.dscbootcamp.adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,12 +49,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int i) {
         final RecyclerViewData data = recyclerViewDataList.get(i);
+        Log.e("name ====", data.getName());
         holder.txtName.setText(data.getName());
         holder.txtNumber.setText(data.getNumber());
 
         // Using Glide library to set the image, also applying circular transformation to the image view
         Glide.with(context).load(data.getImage()).apply(RequestOptions.circleCropTransform()).into(holder.imgPic);
-        //Glide.with(context).load(R.drawable.android_logo).apply(RequestOptions.circleCropTransform()).into(holder.imgPic);
 
     }
 
